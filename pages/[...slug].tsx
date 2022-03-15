@@ -4,6 +4,7 @@ import Head from "next/head";
 import {
   DrupalNode,
   getPathsFromContext,
+  getResource,
   getResourceFromContext,
   getResourceTypeFromContext,
 } from "next-drupal";
@@ -16,8 +17,18 @@ interface NodePageProps {
   node: DrupalNode;
 }
 
-export default function NodePage({ node }: NodePageProps) {
+const NodePage = ({ node }: NodePageProps) => {
   if (!node) return null;
+
+  console.log("node :>> ", node);
+
+  // React.useEffect(() => {
+  //   const getNode = async () => {
+  //     const item = await getResource("node--landing_page", node.id);
+  //     console.log("item :>> ", item);
+  //   };
+  //   getNode();
+  // }, []);
 
   return (
     <Layout>
@@ -33,7 +44,9 @@ export default function NodePage({ node }: NodePageProps) {
       <h1>{node.title}</h1>
     </Layout>
   );
-}
+};
+
+export default NodePage;
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   console.log("context", context);
@@ -48,9 +61,9 @@ export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
 export async function getStaticProps(
   context
 ): Promise<GetStaticPropsResult<NodePageProps>> {
-  console.log("context", context);
+  // console.log("context", context);
   const type = await getResourceTypeFromContext(context);
-  console.log("type", type);
+  // console.log("type", type);
 
   if (!type) {
     return {

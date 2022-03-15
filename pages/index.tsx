@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { GetStaticPropsResult } from "next";
+import Link from "next/link";
 import { DrupalNode, getResourceCollectionFromContext } from "next-drupal";
 
 import { NodeArticleTeaser } from "@/components/node-article";
@@ -20,15 +21,23 @@ export default function IndexPage({ nodes }: IndexPageProps) {
         />
       </Head>
       <div>
-        <h1 className="mb-10 text-6xl font-black">Latest Articles.</h1>
+        <h1 className="mb-5 text-6xl font-black">Landings:</h1>
 
         {nodes?.length ? (
-          nodes.map((node) => (
-            <div key={node.id}>
-              <NodeArticleTeaser node={node} />
-              <hr className="my-20" />
-            </div>
-          ))
+          nodes.map((node) => {
+            console.log("node.path.alias :>> ", node.path.alias);
+            if (!node.path.alias) return null;
+            return (
+              <div key={node.id}>
+                {/* <NodeArticleTeaser node={node} /> */}
+                <Link href={node.path.alias} passHref>
+                  <a>{node.title}</a>
+                </Link>
+
+                <hr className="my-3" />
+              </div>
+            );
+          })
         ) : (
           <p className="py-4">No nodes found</p>
         )}
@@ -51,7 +60,7 @@ export async function getStaticProps(
     }
   );
 
-  console.log("nodes :>> ", nodes[0]);
+  // console.log("nodes :>> ", nodes[0]);
 
   return {
     props: {
