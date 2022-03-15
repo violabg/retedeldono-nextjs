@@ -11,7 +11,7 @@ const blackGradient = {
   70: "rgba(0, 0, 0, 0.7)",
   80: "rgba(0, 0, 0, 0.8)",
   90: "rgba(0, 0, 0, 0.9)",
-  100: "rgba(0, 0, 0, 1)",
+  100: "rgba(0, 0, 0, 1)"
 };
 
 const whiteGradient = {
@@ -25,7 +25,7 @@ const whiteGradient = {
   70: "rgba(255, 255, 255, 0.7)",
   80: "rgba(255, 255, 255, 0.8)",
   90: "rgba(255, 255, 255, 0.9)",
-  100: "rgba(255, 255, 255, 1)",
+  100: "rgba(255, 255, 255, 1)"
 };
 
 // console.log("_brand", _brand);
@@ -39,7 +39,7 @@ const brand = {
   600: "#0093D0",
   700: "#006EAE",
   800: "#004E8C",
-  900: "#003874",
+  900: "#003874"
 };
 
 export const bg = "#f6f6f6";
@@ -49,34 +49,33 @@ export const textColor = "#4a4a4a";
 
 const theme = extendTheme(
   withDefaultColorScheme({
-    colorScheme: "brand",
+    colorScheme: "brand"
   }),
   {
     styles: {
       global: {
         html: {
-          scrollBehavior: "smooth",
+          scrollBehavior: "smooth"
         },
         // styles for the `body`
         body: {
           bg,
           color: "textColor",
           // fontFamily: "'Montserrat', sans-serif",
-          paddingTop: { base: "56px", lg: "73px" },
-          fontWeight: 300,
+          fontWeight: 300
         },
         "h1, h2, h3, h4, h5, h6": {
-          fontWeight: 600,
+          fontWeight: 600
         },
         p: {},
         // styles for the `a`
         a: {
           color: "blue.500",
           _hover: {
-            color: "brand.500",
-          },
-        },
-      },
+            color: "brand.500"
+          }
+        }
+      }
     },
     colors: {
       bg,
@@ -85,11 +84,11 @@ const theme = extendTheme(
       brand,
       blackGradient,
       whiteGradient,
-      textColor,
+      textColor
     },
     fonts: {
       // body: "'Montserrat', sans-serif"
-    },
+    }
   }
 );
 
