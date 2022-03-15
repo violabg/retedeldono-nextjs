@@ -1,4 +1,3 @@
-import * as React from "react";
 import { GetStaticPathsResult, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import {
@@ -6,11 +5,10 @@ import {
   getPathsFromContext,
   getResource,
   getResourceFromContext,
-  getResourceTypeFromContext,
+  getResourceTypeFromContext
 } from "next-drupal";
+import * as React from "react";
 
-import { NodeArticle } from "@/components/node-article";
-import { NodeBasicPage } from "@/components/node-basic-page";
 import { Layout } from "@/components/layout";
 
 interface NodePageProps {
@@ -54,7 +52,7 @@ export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   console.log("paths :>> ", paths[0]);
   return {
     paths,
-    fallback: "blocking",
+    fallback: "blocking"
   };
 }
 
@@ -67,33 +65,33 @@ export async function getStaticProps(
 
   if (!type) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
   let params = {};
   if (type === "node--article") {
     params = {
-      include: "field_image,uid",
+      include: "field_image,uid"
     };
   }
 
   const node = await getResourceFromContext<DrupalNode>(type, context, {
-    params,
+    params
   });
 
   console.log("node", node);
 
   if (!node?.status) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
   return {
     props: {
-      node,
+      node
     },
-    revalidate: 900,
+    revalidate: 900
   };
 }

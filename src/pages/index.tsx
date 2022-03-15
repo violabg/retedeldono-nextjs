@@ -1,10 +1,11 @@
-import Head from "next/head";
 import { GetStaticPropsResult } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { DrupalNode, getResourceCollectionFromContext } from "next-drupal";
 
-import { NodeArticleTeaser } from "@/components/node-article";
 import { Layout } from "@/components/layout";
+
+// import { NodeArticleTeaser } from "src/components/node-article";
 
 interface IndexPageProps {
   nodes: DrupalNode[];
@@ -55,8 +56,8 @@ export async function getStaticProps(
     {
       params: {
         include: "field_image,uid",
-        sort: "-created",
-      },
+        sort: "-created"
+      }
     }
   );
 
@@ -64,8 +65,8 @@ export async function getStaticProps(
 
   return {
     props: {
-      nodes,
+      nodes
     },
-    revalidate: 10,
+    revalidate: 10
   };
 }
