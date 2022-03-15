@@ -16,18 +16,17 @@ interface NodePageProps {
 }
 
 const NodePage = ({ node }: NodePageProps) => {
+  // console.log("node :>> ", node);
+
+  React.useEffect(() => {
+    const getNode = async () => {
+      const item = await getResource("node--landing_page", node.id);
+      console.log("item :>> ", item);
+    };
+    getNode();
+  }, [node.id]);
+
   if (!node) return null;
-
-  console.log("node :>> ", node);
-
-  // React.useEffect(() => {
-  //   const getNode = async () => {
-  //     const item = await getResource("node--landing_page", node.id);
-  //     console.log("item :>> ", item);
-  //   };
-  //   getNode();
-  // }, []);
-
   return (
     <Layout>
       <Head>
@@ -47,9 +46,9 @@ const NodePage = ({ node }: NodePageProps) => {
 export default NodePage;
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
-  console.log("context", context);
+  // console.log("context", context);
   const paths = await getPathsFromContext(["node--landing_page"], context);
-  console.log("paths :>> ", paths[0]);
+  // console.log("paths :>> ", paths[0]);
   return {
     paths,
     fallback: "blocking"

@@ -1,7 +1,11 @@
 import { GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { DrupalNode, getResourceCollectionFromContext } from "next-drupal";
+import {
+  DrupalNode,
+  getResourceCollectionFromContext,
+  useMenu
+} from "next-drupal";
 
 import { Layout } from "@/components/layout";
 
@@ -12,6 +16,9 @@ interface IndexPageProps {
 }
 
 export default function IndexPage({ nodes }: IndexPageProps) {
+  const { tree, items } = useMenu("header-menu");
+  console.log("tree", tree);
+  console.log("items", items);
   return (
     <Layout>
       <Head>
@@ -26,7 +33,7 @@ export default function IndexPage({ nodes }: IndexPageProps) {
 
         {nodes?.length ? (
           nodes.map((node) => {
-            console.log("node.path.alias :>> ", node.path.alias);
+            // console.log("node.path.alias :>> ", node.path.alias);
             if (!node.path.alias) return null;
             return (
               <div key={node.id}>
