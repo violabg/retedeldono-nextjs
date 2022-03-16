@@ -15,13 +15,20 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
+      "@/atoms": ["atoms"],
+      "@/atoms/*": ["atoms/*"],
+      "@/components": ["components"],
       "@/components/*": ["components/*"],
-      "@/nodes/*": ["components/nodes/*"],
-      "@/lib/*": ["lib/*"],
-      "@/pages": ["pages"],
-      "@/pages/*": ["pages/*"],
+      "@/data": ["src/data"],
+      "@/data/*": ["src/data/*"],
+      "@/pages": ["src/pages"],
+      "@/pages/*": ["src/pages/*"],
       "@/theme": ["theme"],
-      "@/theme/*": ["theme/*"]
+      "@/theme/*": ["theme/*"],
+      "@/types": ["types"],
+      "@/types/*": ["types/*"],
+      "@/utils": ["utils"],
+      "@/utils/*": ["utils/*"]
     },
     "incremental": true
   },
