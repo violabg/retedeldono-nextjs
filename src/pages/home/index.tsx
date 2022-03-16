@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import Hero from "@/components/Home/Hero";
 import { Layout } from "@/components/layout";
 
 // import { NodeArticleTeaser } from "src/components/node-article";
@@ -15,9 +16,7 @@ export default function IndexPage() {
           content="A Next.js site powered by a Drupal backend."
         />
       </Head>
-      <div>
-        <h1 className="mb-5 text-6xl font-black">Home:</h1>
-      </div>
+      <Hero />
     </Layout>
   );
 }
