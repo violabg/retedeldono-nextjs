@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   Flex,
   HStack,
   Icon,
@@ -33,9 +34,9 @@ const Footer: React.FC<Props> = (props) => {
       justify={"center"}
       pos={"relative"}
       w={"100vw"}
-      p={"15px"}
+      // p={"15px"}
     >
-      <Box maxW={"container.lg"} color={"white"} w={"full"}>
+      <Container maxW={"3xl"} color={"white"} w={"full"}>
         <VStack
           spacing="3"
           py={2}
@@ -143,7 +144,7 @@ const Footer: React.FC<Props> = (props) => {
             <Text>Termini e condizioni d'uso sulla Privacy</Text>
           </Box>
         </VStack>
-      </Box>
+      </Container>
     </Flex>
   );
 };
