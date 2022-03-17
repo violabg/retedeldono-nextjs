@@ -14,8 +14,6 @@ type Props = {
 const Navbar: React.FC<Props> = (props) => {
   const { menu, localePath } = props;
 
-  console.log("menu", menu);
-
   return (
     <Container maxW={"container.lg"}>
       <NavContent.Mobile menu={menu} display={{ base: "flex", md: "none" }} />

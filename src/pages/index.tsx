@@ -22,7 +22,7 @@ export default function IndexPage({ nodes }: IndexPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Next.js for Drupal</title>
+        <title>Rete del dono</title>
         <meta
           name="description"
           content="A Next.js site powered by a Drupal backend."
