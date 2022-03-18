@@ -6,6 +6,8 @@ import NextImage from "../NextImage";
 type Props = {};
 
 const Card: React.FC<Props> = (props) => {
+  const val1 = 27881;
+  const val2 = 35000;
   return (
     <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
       <NextImage
@@ -30,14 +32,14 @@ const Card: React.FC<Props> = (props) => {
         <Box>
           <Text fontSize={"13px"}>
             <strong style={{ color: "#ED7225", fontSize: "14px" }}>
-              € {"27.881"}
+              € {val1.toLocaleString()}
             </strong>{" "}
-            raccolti di <span>€{"35.000"}</span>
+            raccolti di <span>€{val2.toLocaleString()}</span>
           </Text>
           <Progress
             colorScheme="orange"
             size="sm"
-            value={20}
+            value={(val1 / val2) * 100}
             borderRadius={10}
           />
         </Box>

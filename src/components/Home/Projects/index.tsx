@@ -1,4 +1,4 @@
-import { Container, Flex } from "@chakra-ui/react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 import base from "@emotion/styled/types/base";
 import React from "react";
 
@@ -11,16 +11,12 @@ const Projects: React.FC<Props> = (props) => {
   return (
     <Section py={5} bg={"#F7F8F9"}>
       <Container maxW={"4xl"}>
-        <Flex
-          direction={{ base: "row" }}
-          justify={"space-around"}
-          align={"flex-start"}
-        >
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
           {/* loop dei progetti */}
           <Card />
           <Card />
           <Card />
-        </Flex>
+        </SimpleGrid>
       </Container>
     </Section>
   );
