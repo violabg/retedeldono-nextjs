@@ -11,7 +11,7 @@ const Hero: React.FC<Props> = (props) => {
   return (
     <Section className="hero-section" mt={{ base: 70, md: 135 }}>
       <Box bg={"red"} w={"100vw"} h={"55vh"} p={5}>
-        <Container className="container" maxW={"3xl"} h={"full"}>
+        <Container className="container" maxW={"4xl"} h={"full"}>
           <Flex
             dir={"column"}
             align={"flex-end"}

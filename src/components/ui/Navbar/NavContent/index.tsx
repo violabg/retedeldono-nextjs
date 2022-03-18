@@ -3,6 +3,7 @@ import {
   Box,
   BoxProps,
   Center,
+  Container,
   Flex,
   Stack,
   StackDivider,
@@ -142,32 +143,13 @@ const DesktopNavContent: React.FC<Props> = (props) => {
       justify="space-between"
       {...props}
     >
-      {menu?.items ? (
-        <Box
-          key={1}
-          as="a"
-          className="fancynavbar-brand"
-          href="#top"
-          color="#28A8C4"
-          py={{ base: 0, lg: "0.5rem" }}
-          px="1rem"
-        >
-          <Box
-            as={"img"}
-            className="fancynavbar-brand-img"
-            src="/img/logo.png"
-            alt=""
-            // width="200"
-            height="120"
-          />
-        </Box>
-      ) : (
-        <Link key={1} href="/" passHref>
+      <Container maxW={"4xl"}>
+        {menu?.items ? (
           <Box
             key={1}
             as="a"
-            href="/"
             className="fancynavbar-brand"
+            href="#top"
             color="#28A8C4"
             py={{ base: 0, lg: "0.5rem" }}
             px="1rem"
@@ -181,28 +163,49 @@ const DesktopNavContent: React.FC<Props> = (props) => {
               height="120"
             />
           </Box>
-        </Link>
-      )}
-      {menu?.items && (
-        <Flex
-          as={"ul"}
-          className={"navbar-cont fancynavbar-nav"}
-          align={"center"}
-          justify={"center"}
-          dir={"row"}
-          pl={0}
-          mb={0}
-          // w="100%"
-          listStyleType="none"
-        >
-          {menu?.items.map((item) => {
-            return <NavItem key={item?.id} item={item} />;
-          })}
-          <Box as="button" onClick={() => console.log("search")} px={2}>
-            <SearchIcon color={"#28A8C4"} fontWeight={600} />
-          </Box>
-        </Flex>
-      )}
+        ) : (
+          <Link key={1} href="/" passHref>
+            <Box
+              key={1}
+              as="a"
+              href="/"
+              className="fancynavbar-brand"
+              color="#28A8C4"
+              py={{ base: 0, lg: "0.5rem" }}
+              px="1rem"
+            >
+              <Box
+                as={"img"}
+                className="fancynavbar-brand-img"
+                src="/img/logo.png"
+                alt=""
+                // width="200"
+                height="120"
+              />
+            </Box>
+          </Link>
+        )}
+        {menu?.items && (
+          <Flex
+            as={"ul"}
+            className={"navbar-cont fancynavbar-nav"}
+            align={"center"}
+            justify={"center"}
+            dir={"row"}
+            pl={0}
+            mb={0}
+            // w="100%"
+            listStyleType="none"
+          >
+            {menu?.items.map((item) => {
+              return <NavItem key={item?.id} item={item} />;
+            })}
+            <Box as="button" onClick={() => console.log("search")} px={2}>
+              <SearchIcon color={"#28A8C4"} fontWeight={600} />
+            </Box>
+          </Flex>
+        )}
+      </Container>
     </Flex>
   );
 };

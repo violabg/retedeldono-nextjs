@@ -9,13 +9,14 @@ type Props = {};
 
 const Projects: React.FC<Props> = (props) => {
   return (
-    <Section py={5}>
-      <Container maxW={"3xl"}>
+    <Section py={5} bg={"#F7F8F9"}>
+      <Container maxW={"4xl"}>
         <Flex
           direction={{ base: "row" }}
           justify={"space-around"}
           align={"flex-start"}
         >
+          {/* loop dei progetti */}
           <Card />
           <Card />
           <Card />

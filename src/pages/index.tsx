@@ -68,7 +68,7 @@ export async function getStaticProps(
     }
   );
 
-  // console.log("nodes :>> ", nodes[0]);
+  console.log("nodes :>> ", nodes[0]);
 
   return {
     props: {

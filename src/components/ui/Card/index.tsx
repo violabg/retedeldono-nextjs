@@ -7,13 +7,14 @@ type Props = {};
 
 const Card: React.FC<Props> = (props) => {
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+    <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
       <NextImage
         width={300}
         height={150}
         layout={"responsive"}
         src={"/img/card-image.png"}
         alt={""}
+        objectFit={"cover"}
       />
       <Flex
         direction={"column"}

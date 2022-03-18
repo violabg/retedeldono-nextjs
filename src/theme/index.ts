@@ -1,5 +1,7 @@
 import { color, extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
+import { Button } from "./Button";
+
 const blackGradient = {
   0: "rgba(0, 0, 0, 0)",
   10: "rgba(0, 0, 0, 0.1)",
@@ -88,6 +90,9 @@ const theme = extendTheme(
     },
     fonts: {
       // body: "'Montserrat', sans-serif"
+    },
+    components: {
+      Button
     }
   }
 );

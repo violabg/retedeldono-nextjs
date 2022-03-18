@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import About from "@/components/Home/About";
 import Hero from "@/components/Home/Hero";
 import Projects from "@/components/Home/Projects";
 import { Layout } from "@/components/layout";
@@ -15,6 +16,7 @@ export default function IndexPage() {
       </Head>
       <Hero />
       <Projects />
+      <About />
     </Layout>
   );
 }
