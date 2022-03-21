@@ -48,6 +48,7 @@ export const bg = "#f6f6f6";
 export const inputBg = "#292929";
 export const black = "#000";
 export const textColor = "#4a4a4a";
+export const brandOrange = "#ED7224";
 
 const theme = extendTheme(
   withDefaultColorScheme({
@@ -89,11 +90,10 @@ const theme = extendTheme(
       brand,
       blackGradient,
       whiteGradient,
-      textColor
+      textColor,
+      brandOrange
     },
-    fonts: {
-      // body: "'Montserrat', sans-serif"
-    },
+    fonts: {},
     components: {
       Button
     }

@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 
+import HeroCard from "@/components/ui/HeroCard";
 import NextImage from "@/components/ui/NextImage";
 import { Section } from "@/components/ui/Section";
 import { HeroProps } from "@/types";
@@ -15,12 +16,13 @@ const Hero: React.FC<Props> = (props) => {
           <Flex
             dir={"column"}
             align={"flex-end"}
-            justify={"flex-start"}
+            justify={"space-between"}
             h={"full"}
           >
             <Heading as={"h1"} color={"white"}>
               LILT Milano Monza Brianza
             </Heading>
+            <HeroCard />
           </Flex>
         </Container>
       </Box>

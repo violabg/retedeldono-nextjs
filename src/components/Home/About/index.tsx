@@ -10,14 +10,16 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
+import Section from "@/components/ui/Section";
+
 type Props = {};
 
 const About: React.FC<Props> = (props) => {
   return (
-    <Box>
+    <Section>
       <Container maxW={"5xl"}>
-        <SimpleGrid columns={{ base: 1, md: 2 }}>
-          <Box p={3}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={7}>
+          <Box>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             repudiandae eos quidem voluptatem id? Dicta enim pariatur, quibusdam
             nesciunt obcaecati voluptatibus necessitatibus distinctio, totam
@@ -33,20 +35,24 @@ const About: React.FC<Props> = (props) => {
             voluptatem totam minima non quam eveniet iste, commodi sunt labore
             quo. Accusantium veniam illum fuga dolores.
           </Box>
-          <Box p={3}>
-            <Box px={"80px"} py={5} bg={"#ED7225"} borderRadius={10}>
+          <Box>
+            <Box px={"80px"} py={5} bg={"brandOrange"} borderRadius={10}>
               <VStack spacing={4} textAlign={"center"} color={"white"}>
                 <Text fontWeight={"bold"}>Vuoi fare di più?</Text>
                 <Text>Anche tu puoi sostenere le campagne con iniziative</Text>
-                <Button variant={"outline"}>scopri di più</Button>
-                <Button variant={"solid"}>inizia ora ⮕</Button>
+                <Button variant={"outline"} textTransform={"uppercase"}>
+                  scopri di più
+                </Button>
+                <Button variant={"solid-w"} textTransform={"uppercase"}>
+                  inizia ora ⮕
+                </Button>
               </VStack>
             </Box>
           </Box>
         </SimpleGrid>
         <Divider orientation="horizontal" />
-        <SimpleGrid columns={{ base: 1, md: 2 }} py={7}>
-          <Box p={3}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} py={7} spacing={7}>
+          <Box>
             <Text
               color={"brand.700"}
               textTransform={"uppercase"}
@@ -54,6 +60,15 @@ const About: React.FC<Props> = (props) => {
             >
               Info & Bio
             </Text>
+            <Box
+              as={"img"}
+              className="fancynavbar-brand-img"
+              src="/img/logo.png"
+              alt=""
+              py={2}
+              // width="200"
+              height="100"
+            />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             repudiandae eos quidem voluptatem id? Dicta enim pariatur, quibusdam
             nesciunt obcaecati voluptatibus necessitatibus distinctio, totam
@@ -69,7 +84,7 @@ const About: React.FC<Props> = (props) => {
           </AspectRatio>
         </SimpleGrid>
       </Container>
-    </Box>
+    </Section>
   );
 };
 

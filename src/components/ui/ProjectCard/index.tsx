@@ -13,7 +13,7 @@ import NextImage from "../NextImage";
 
 type Props = {};
 
-const Card: React.FC<Props> = (props) => {
+const ProjectCard: React.FC<Props> = (props) => {
   const val1 = 27881;
   const val2 = 35000;
   return (
@@ -46,7 +46,7 @@ const Card: React.FC<Props> = (props) => {
         </Heading>
         <Box>
           <Text fontSize={"13px"}>
-            <strong style={{ color: "#ED7225", fontSize: "14px" }}>
+            <strong style={{ color: "brandOrange", fontSize: "14px" }}>
               € {val1.toLocaleString()}
             </strong>{" "}
             raccolti di <span>€{val2.toLocaleString()}</span>
@@ -63,4 +63,4 @@ const Card: React.FC<Props> = (props) => {
   );
 };
 
-export default Card;
+export default ProjectCard;

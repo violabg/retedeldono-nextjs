@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import React from "react";
 
 import { NavMenu } from "@/types";
@@ -15,10 +15,15 @@ const Navbar: React.FC<Props> = (props) => {
   const { menu, localePath } = props;
 
   return (
-    <Container maxW={"container.lg"}>
-      <NavContent.Mobile menu={menu} display={{ base: "flex", md: "none" }} />
-      <NavContent.Desktop menu={menu} display={{ base: "none", md: "flex" }} />
-    </Container>
+    <Box zIndex={999} pos={"relative"}>
+      <Container maxW={"container.lg"}>
+        <NavContent.Mobile menu={menu} display={{ base: "flex", md: "none" }} />
+        <NavContent.Desktop
+          menu={menu}
+          display={{ base: "none", md: "flex" }}
+        />
+      </Container>
+    </Box>
   );
 };
 
