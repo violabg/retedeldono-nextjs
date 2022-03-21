@@ -11,14 +11,14 @@ const Hero: React.FC<Props> = (props) => {
   return (
     <Section className="hero-section" mt={{ base: 70, md: 135 }}>
       <Box bg={"red"} w={"100vw"} h={"55vh"} p={5}>
-        <Container className="container" maxW={"4xl"} h={"full"}>
+        <Container className="container" maxW={"5xl"} h={"full"}>
           <Flex
             dir={"column"}
             align={"flex-end"}
             justify={"flex-start"}
             h={"full"}
           >
-            <Heading as={"h1"} zIndex={10} color={"white"}>
+            <Heading as={"h1"} color={"white"}>
               LILT Milano Monza Brianza
             </Heading>
           </Flex>

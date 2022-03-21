@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Progress, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Progress,
+  Text
+} from "@chakra-ui/react";
 import React from "react";
 
 import NextImage from "../NextImage";
@@ -9,7 +17,14 @@ const Card: React.FC<Props> = (props) => {
   const val1 = 27881;
   const val2 = 35000;
   return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
+    <LinkBox
+      as="article"
+      maxW="sm"
+      borderWidth="1px"
+      rounded="lg"
+      overflow="hidden"
+    >
+      <LinkOverlay href="#"></LinkOverlay>
       <NextImage
         width={300}
         height={150}
@@ -44,7 +59,7 @@ const Card: React.FC<Props> = (props) => {
           />
         </Box>
       </Flex>
-    </Box>
+    </LinkBox>
   );
 };
 

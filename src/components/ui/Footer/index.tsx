@@ -36,7 +36,7 @@ const Footer: React.FC<Props> = (props) => {
       w={"100vw"}
       // p={"15px"}
     >
-      <Container maxW={"4xl"} color={"white"} w={"full"}>
+      <Container maxW={"5xl"} color={"white"} w={"full"}>
         <VStack
           spacing="3"
           py={2}
@@ -84,7 +84,7 @@ const Footer: React.FC<Props> = (props) => {
               justify={"space-between"}
             >
               <Text>Seguici su</Text>
-              <HStack color={"brand.500"} px={2}>
+              <HStack color={"white"} px={2}>
                 <IconButton
                   as="a"
                   icon={<Icon as={FaInstagram} boxSize={5} />}
@@ -94,6 +94,7 @@ const Footer: React.FC<Props> = (props) => {
                   target="_blank"
                   size={"sm"}
                   variant="secondary"
+                  color={"white"}
                 />
                 <IconButton
                   as="a"
@@ -104,6 +105,7 @@ const Footer: React.FC<Props> = (props) => {
                   target="_blank"
                   size={"sm"}
                   variant="secondary"
+                  color={"white"}
                 />
                 <IconButton
                   as="a"
@@ -114,6 +116,7 @@ const Footer: React.FC<Props> = (props) => {
                   target="_blank"
                   size={"sm"}
                   variant="secondary"
+                  color={"white"}
                 />
                 <IconButton
                   as="a"
@@ -124,6 +127,7 @@ const Footer: React.FC<Props> = (props) => {
                   target="_blank"
                   size={"sm"}
                   variant="secondary"
+                  color={"white"}
                 />
                 <IconButton
                   as="a"
@@ -134,6 +138,7 @@ const Footer: React.FC<Props> = (props) => {
                   target="_blank"
                   size={"sm"}
                   variant="secondary"
+                  color={"white"}
                 />
               </HStack>
             </Flex>

@@ -56,6 +56,9 @@ const theme = extendTheme(
   {
     styles: {
       global: {
+        // ".js-focus-visible :focus:not(.focus-visible)": {
+        //   outline: "none"
+        // },
         html: {
           scrollBehavior: "smooth"
         },

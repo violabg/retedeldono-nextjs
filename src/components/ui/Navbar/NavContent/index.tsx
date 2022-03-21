@@ -143,7 +143,7 @@ const DesktopNavContent: React.FC<Props> = (props) => {
       justify="space-between"
       {...props}
     >
-      <Container maxW={"4xl"}>
+      <Container maxW={"5xl"}>
         {menu?.items ? (
           <Box
             key={1}
