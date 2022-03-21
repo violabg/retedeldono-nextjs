@@ -24,6 +24,7 @@ export const Button = {
       color: "#044899",
       borderRadius: "full",
       border: "3px solid white",
+      boxShadow: "0px 3px 4px 0px rgba(0,0,0,0.3)",
       _hover: {
         bg: "transparent",
         textDecoration: "none",
@@ -37,7 +38,7 @@ export const Button = {
       border: "3px solid #ED7224",
       _hover: {
         bg: "white",
-        color: "#044899",
+        color: "#ED7224",
         textDecoration: "none"
       }
     },

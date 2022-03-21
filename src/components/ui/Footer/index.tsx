@@ -28,19 +28,19 @@ const Footer: React.FC<Props> = (props) => {
   return (
     <Flex
       as={"footer"}
-      bg={"#044899"}
+      bg={"brand.800"}
       flexDir={"column"}
       align={"center"}
       justify={"center"}
       pos={"relative"}
       w={"100vw"}
-      // p={"15px"}
+      py={10}
     >
       <Container maxW={"5xl"} color={"white"} w={"full"}>
         <VStack
           spacing="3"
           py={2}
-          divider={<StackDivider borderColor="#bbb" />}
+          divider={<StackDivider borderColor="white" />}
         >
           <Stack
             direction={{ base: "column", md: "row" }}
@@ -49,6 +49,8 @@ const Footer: React.FC<Props> = (props) => {
             align={"center"}
             justify={"space-around"}
             w={"full"}
+            fontSize={"12px"}
+            fontWeight={700}
           >
             <Box>
               <Link href={"#"}>Personal Fundraiser</Link>
@@ -83,7 +85,9 @@ const Footer: React.FC<Props> = (props) => {
               align="center"
               justify={"space-between"}
             >
-              <Text>Seguici su</Text>
+              <Text fontSize={"12px"} fontWeight={700}>
+                Seguici su
+              </Text>
               <HStack color={"white"} px={2}>
                 <IconButton
                   as="a"
@@ -143,7 +147,7 @@ const Footer: React.FC<Props> = (props) => {
               </HStack>
             </Flex>
           </Stack>
-          <Box pt={10}>
+          <Box pt={10} fontSize={"12px"}>
             <Text>Termini e condizioni d'uso sulla Privacy</Text>
             <Text>Termini e condizioni d'uso sulla Privacy</Text>
             <Text>Termini e condizioni d'uso sulla Privacy</Text>

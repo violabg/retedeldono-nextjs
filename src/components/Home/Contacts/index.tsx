@@ -14,14 +14,14 @@ const Contacts = (props) => {
             align={"center"}
             justify={"space-between"}
           >
-            <Box maxW={"50%"}>
+            <Box>
               <Text fontWeight={"bold"}>Vuoi contattare l'ente?</Text>
               <Text>
                 Lorem ipsum, dolor sit amet
                 <br /> consectetur adipisicing elit.
               </Text>
             </Box>
-            <Box>
+            <Box pt={{ base: 3, md: 0 }}>
               <Button variant={"solid-w"} textTransform={"uppercase"}>
                 invia un messaggio
                 <IoSendSharp size={18} style={{ marginLeft: 3 }} />

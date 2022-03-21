@@ -1,3 +1,5 @@
+import "focus-visible/dist/focus-visible";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Router from "next/router";
