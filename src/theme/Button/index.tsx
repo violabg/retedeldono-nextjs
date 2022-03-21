@@ -2,7 +2,7 @@ import { color } from "@chakra-ui/react";
 
 export const Button = {
   baseStyle: {
-    fontWeight: "600",
+    fontWeight: "700",
     // textTransform: "uppercase",
     borderRadius: "0"
   },
@@ -21,7 +21,7 @@ export const Button = {
   variants: {
     "solid-w": {
       bg: "white",
-      color: "#2d2d2d",
+      color: "#044899",
       borderRadius: "full",
       border: "3px solid white",
       _hover: {
@@ -37,7 +37,7 @@ export const Button = {
       border: "3px solid #ED7224",
       _hover: {
         bg: "white",
-        color: "#2d2d2d",
+        color: "#044899",
         textDecoration: "none"
       }
     },
@@ -49,7 +49,7 @@ export const Button = {
       _hover: {
         bg: "white",
         textDecoration: "none",
-        color: "#2d2d2d",
+        color: "#044899",
         border: "3px solid white"
       }
     }

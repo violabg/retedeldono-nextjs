@@ -18,7 +18,7 @@ const Projects: React.FC<Props> = (props) => {
           </TabList>
 
           <TabPanels>
-            <TabPanel>
+            <TabPanel className={"tab-progress"}>
               <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
                 {/* loop dei progetti */}
                 <ProjectCard />
@@ -26,7 +26,7 @@ const Projects: React.FC<Props> = (props) => {
                 <ProjectCard />
               </SimpleGrid>
             </TabPanel>
-            <TabPanel>
+            <TabPanel className={"tab-done"}>
               <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
                 {/* loop dei progetti */}
                 <ProjectCard />

@@ -24,8 +24,25 @@ interface Props extends BoxProps {
 }
 
 const MobileNavContent: React.FC<Props> = (props) => {
-  const { menu } = props;
+  const {
+    menu = {
+      id: 1,
+      items: [
+        {
+          id: 1,
+          label: "Come funziona",
+          url: "#come_funziona"
+        },
+        {
+          id: 2,
+          label: "Accedi/Registrati",
+          url: "#accedi"
+        }
+      ]
+    }
+  } = props;
   const { isOpen, onToggle } = useDisclosure();
+  console.log("menu", menu);
   return (
     <Flex
       key={1}
@@ -58,7 +75,7 @@ const MobileNavContent: React.FC<Props> = (props) => {
         pos="absolute"
         insetX="0"
         bg="white"
-        top="55px"
+        top="60px"
         px={"15px"}
         listStyleType={"none"}
         animate={isOpen ? "enter" : "exit"}
@@ -125,7 +142,23 @@ const MobileNavContent: React.FC<Props> = (props) => {
 };
 
 const DesktopNavContent: React.FC<Props> = (props) => {
-  const { menu } = props;
+  const {
+    menu = {
+      id: 1,
+      items: [
+        {
+          id: 1,
+          label: "Come funziona",
+          url: "#come_funziona"
+        },
+        {
+          id: 2,
+          label: "Accedi/Registrati",
+          url: "#accedi"
+        }
+      ]
+    }
+  } = props;
 
   return (
     <Flex
@@ -143,7 +176,12 @@ const DesktopNavContent: React.FC<Props> = (props) => {
       justify="space-between"
       {...props}
     >
-      <Container maxW={"5xl"}>
+      <Container
+        maxW={"5xl"}
+        display={"flex"}
+        justifyContent={"space-between"}
+        alignContent={"center"}
+      >
         {menu?.items ? (
           <Box
             key={1}

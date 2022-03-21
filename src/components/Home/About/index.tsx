@@ -9,6 +9,8 @@ import {
   VStack
 } from "@chakra-ui/react";
 import React from "react";
+import { BsQuestionCircle } from "react-icons/bs";
+import { FiArrowRight } from "react-icons/fi";
 
 import Section from "@/components/ui/Section";
 
@@ -41,10 +43,12 @@ const About: React.FC<Props> = (props) => {
                 <Text fontWeight={"bold"}>Vuoi fare di più?</Text>
                 <Text>Anche tu puoi sostenere le campagne con iniziative</Text>
                 <Button variant={"outline"} textTransform={"uppercase"}>
-                  scopri di più
+                  scopri di più{" "}
+                  <BsQuestionCircle size={18} style={{ marginLeft: 3 }} />
                 </Button>
                 <Button variant={"solid-w"} textTransform={"uppercase"}>
-                  inizia ora ⮕
+                  inizia ora{" "}
+                  <FiArrowRight size={18} style={{ marginLeft: 3 }} />
                 </Button>
               </VStack>
             </Box>

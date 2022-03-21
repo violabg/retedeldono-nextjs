@@ -53,6 +53,7 @@ const ProjectCard: React.FC<Props> = (props) => {
           </Text>
           <Progress
             colorScheme="orange"
+            // bg={"brandOrange"}
             size="sm"
             value={(val1 / val2) * 100}
             borderRadius={10}

@@ -1,5 +1,6 @@
 import { Box, Button, Text, VStack } from "@chakra-ui/react";
 import React from "react";
+import { MdContactPage } from "react-icons/md";
 
 import NextImage from "../NextImage";
 
@@ -37,6 +38,7 @@ const HeroCard: React.FC<Props> = (props) => {
           16043
         </Text>
         <Button variant="solid-o" size={"xl"}>
+          <MdContactPage size={18} style={{ marginRight: 3 }} />
           {nProgect} progetti attivi
         </Button>
       </VStack>
