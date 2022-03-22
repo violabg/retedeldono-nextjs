@@ -17,8 +17,8 @@ export const Layout: React.FC<Props> = ({ children, data }) => {
     <>
       <PreviewAlert />
       <Box as="main">
-        {children}
         <Navbar menu={data?.menu} />
+        {children}
         <Footer />
       </Box>
     </>
