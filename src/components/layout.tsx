@@ -16,9 +16,9 @@ export const Layout: React.FC<Props> = ({ children, data }) => {
   return (
     <>
       <PreviewAlert />
-      <Box as="main">
+      <Box as="main" pt="136px">
         <Navbar menu={data?.menu} />
-        {children}
+        <Box className="content">{children}</Box>
         <Footer />
       </Box>
     </>

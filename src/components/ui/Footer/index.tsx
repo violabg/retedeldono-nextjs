@@ -37,7 +37,7 @@ const Footer: React.FC<Props> = (props) => {
       pos={"relative"}
       w={"100vw"}
       py={10}
-      mt={20}
+      // mt={20}
     >
       <Container maxW={"5xl"} color={"white"} w={"full"}>
         <VStack
