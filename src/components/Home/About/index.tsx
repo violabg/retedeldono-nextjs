@@ -4,6 +4,7 @@ import {
   Button,
   Container,
   Divider,
+  Flex,
   SimpleGrid,
   Text,
   VStack
@@ -19,8 +20,8 @@ type Props = {};
 const About: React.FC<Props> = (props) => {
   return (
     <Section>
-      <Container maxW={"5xl"}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={7}>
+      <Container maxW={"container.xl"}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={7} py={7}>
           <Box>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             repudiandae eos quidem voluptatem id? Dicta enim pariatur, quibusdam
@@ -40,16 +41,28 @@ const About: React.FC<Props> = (props) => {
           <Box>
             <Box px={"80px"} py={5} bg={"brandOrange"} borderRadius={10}>
               <VStack spacing={4} textAlign={"center"} color={"white"}>
-                <Text fontWeight={"bold"}>Vuoi fare di più?</Text>
+                <Text fontWeight={"bold"} fontSize={"2xl"}>
+                  Vuoi fare di più?
+                </Text>
                 <Text>Anche tu puoi sostenere le campagne con iniziative</Text>
-                <Button variant={"outline"} textTransform={"uppercase"}>
-                  scopri di più{" "}
-                  <BsQuestionCircle size={18} style={{ marginLeft: 3 }} />
-                </Button>
-                <Button variant={"solid-w"} textTransform={"uppercase"}>
-                  inizia ora{" "}
-                  <FiArrowRight size={18} style={{ marginLeft: 3 }} />
-                </Button>
+                <Flex direction="column" align={"stretch"} pb={10} pt={5}>
+                  <Button
+                    variant={"outline"}
+                    textTransform={"uppercase"}
+                    my={2}
+                  >
+                    scopri di più{" "}
+                    <BsQuestionCircle size={18} style={{ marginLeft: 3 }} />
+                  </Button>
+                  <Button
+                    variant={"solid-w"}
+                    textTransform={"uppercase"}
+                    my={2}
+                  >
+                    inizia ora{" "}
+                    <FiArrowRight size={18} style={{ marginLeft: 3 }} />
+                  </Button>
+                </Flex>
               </VStack>
             </Box>
           </Box>
@@ -70,8 +83,7 @@ const About: React.FC<Props> = (props) => {
               src="/img/logo.png"
               alt=""
               py={2}
-              // width="200"
-              height="100"
+              height="150"
             />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             repudiandae eos quidem voluptatem id? Dicta enim pariatur, quibusdam

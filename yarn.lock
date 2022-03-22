@@ -2202,7 +2202,7 @@
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   "version" "4.2.0"
 
-"framer-motion@^6", "framer-motion@3.x || 4.x || 5.x || 6.x":
+"framer-motion@^6.2.8", "framer-motion@3.x || 4.x || 5.x || 6.x":
   "integrity" "sha512-4PtBWFJ6NqR350zYVt9AsFDtISTqsdqna79FvSYPfYDXuuqFmiKtZdkTnYPslnsOMedTW0pEvaQ7eqjD+sA+HA=="
   "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-6.2.8.tgz"
   "version" "6.2.8"

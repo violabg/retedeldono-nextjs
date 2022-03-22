@@ -24,11 +24,12 @@ export const Button = {
       color: "#044899",
       borderRadius: "full",
       border: "3px solid white",
-      boxShadow: "0px 3px 4px 0px rgba(0,0,0,0.3)",
+      boxShadow: "0px 3px 4px 0px rgba(0,0,0,0.2)",
       _hover: {
         bg: "transparent",
         textDecoration: "none",
-        color: "white"
+        color: "white",
+        boxShadow: "none"
       }
     },
     "solid-o": {

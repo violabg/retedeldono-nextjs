@@ -13,11 +13,12 @@ const HeroCard: React.FC<Props> = (props) => {
       as="article"
       maxW="md"
       overflow="hidden"
+      position={"relative"}
       bg={"white"}
       p={8}
       w={"full"}
-      mb={"-25px"}
-      boxShadow={"0px 1px 4px 0px #B0B0B0"}
+      bottom={"-65px"}
+      boxShadow={"0px 2px 1px 0px rgba(0,0,0,0.1)"}
       zIndex={2}
       display={{ base: "none", md: "block" }}
     >
