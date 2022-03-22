@@ -148,9 +148,7 @@ const Footer: React.FC<Props> = (props) => {
             </Flex>
           </Stack>
           <Box pt={10} fontSize={"12px"}>
-            <Text>Termini e condizioni d'uso sulla Privacy</Text>
-            <Text>Termini e condizioni d'uso sulla Privacy</Text>
-            <Text>Termini e condizioni d'uso sulla Privacy</Text>
+            <Text>{"Termini e condizioni d'uso sulla Privacy"}</Text>
           </Box>
         </VStack>
       </Container>

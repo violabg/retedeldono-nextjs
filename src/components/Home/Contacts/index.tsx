@@ -15,7 +15,7 @@ const Contacts = (props) => {
             justify={"space-between"}
           >
             <Box>
-              <Text fontWeight={"bold"}>Vuoi contattare l'ente?</Text>
+              <Text fontWeight={"bold"}>{"Vuoi contattare l'ente?"}</Text>
               <Text>
                 Lorem ipsum, dolor sit amet
                 <br /> consectetur adipisicing elit.
