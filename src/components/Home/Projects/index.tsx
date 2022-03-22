@@ -6,15 +6,20 @@ import {
   useRadioGroup
 } from "@chakra-ui/react";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { IoIosPeople } from "react-icons/io";
 import { MdContactPage } from "react-icons/md";
 
+import { MotionBoxT, MotionSimpleGrid } from "@/components/ui/motion";
 import ProjectCard from "@/components/ui/ProjectCard";
 import RadioCard from "@/components/ui/RadioCard";
 import Section from "@/components/ui/Section";
+import { ProjectProps } from "@/types";
 
-type Props = {};
+type Props = {
+  projects: ProjectProps[];
+};
 
 const Projects: React.FC<Props> = (props) => {
   // const [filteredWorks, setFilteredWorks] = useState<ProjectEntity[]>(
@@ -34,6 +39,7 @@ const Projects: React.FC<Props> = (props) => {
   //     setFilteredWorks(temp);
   //   }
   // };
+  const { projects } = props;
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
     defaultValue: "projects",
@@ -43,9 +49,10 @@ const Projects: React.FC<Props> = (props) => {
     }
   });
   const group = getRootProps();
+  console.log("projects", projects);
   return (
-    <Section py={5} bg={"#F7F8F9"}>
-      <Container maxW={"5xl"}>
+    <Section>
+      <Container maxW={"container.xl"}>
         <Box py={5}>
           <HStack spacing={3} align={"center"}>
             <RadioCard {...getRadioProps({ value: "projects" })}>
@@ -92,17 +99,25 @@ const Projects: React.FC<Props> = (props) => {
 
           <TabPanels>
             <TabPanel className={"tab-progress"}>
-              <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
+              <MotionSimpleGrid
+                id="project-wrap"
+                // minChildWidth="120px"
+                spacing={4}
+                w="full"
+                layoutId="portfolio-layout"
+                columns={{ base: 1, sm: 2, md: 3 }}
+              >
                 {/* loop dei progetti */}
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-              </SimpleGrid>
+                <AnimatePresence>
+                  {projects.map((project) => {
+                    return <ProjectCard key={project.id} project={project} />;
+                  })}
+                </AnimatePresence>
+              </MotionSimpleGrid>
             </TabPanel>
             <TabPanel className={"tab-done"}>
               <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
                 {/* loop dei progetti */}
-                <ProjectCard />
               </SimpleGrid>
             </TabPanel>
           </TabPanels>

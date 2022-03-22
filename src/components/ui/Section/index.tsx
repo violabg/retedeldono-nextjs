@@ -10,6 +10,7 @@ export const Section = (props: Props) => {
       direction={"column"}
       // direction={{ base: "column", md: "row" }}
       position="relative"
+      py={5}
       // h={"100vh"}
       {...props}
     />

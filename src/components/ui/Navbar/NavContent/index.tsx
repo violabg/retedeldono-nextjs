@@ -20,29 +20,12 @@ import { NavList } from "../NavList";
 
 interface Props extends BoxProps {
   menu?: NavMenu;
-  localePath?: string;
 }
 
 const MobileNavContent: React.FC<Props> = (props) => {
-  const {
-    menu = {
-      id: 1,
-      items: [
-        {
-          id: 1,
-          label: "Come funziona",
-          url: "#come_funziona"
-        },
-        {
-          id: 2,
-          label: "Accedi/Registrati",
-          url: "#accedi"
-        }
-      ]
-    }
-  } = props;
+  const { menu } = props;
   const { isOpen, onToggle } = useDisclosure();
-  console.log("menu", menu);
+  // console.log("menu", menu);
   return (
     <Flex
       key={1}
@@ -142,24 +125,8 @@ const MobileNavContent: React.FC<Props> = (props) => {
 };
 
 const DesktopNavContent: React.FC<Props> = (props) => {
-  const {
-    menu = {
-      id: 1,
-      items: [
-        {
-          id: 1,
-          label: "Come funziona",
-          url: "#come_funziona"
-        },
-        {
-          id: 2,
-          label: "Accedi/Registrati",
-          url: "#accedi"
-        }
-      ]
-    }
-  } = props;
-
+  const { menu } = props;
+  console.log("menu", menu);
   return (
     <Flex
       key={1}

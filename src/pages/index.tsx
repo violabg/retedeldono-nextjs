@@ -1,3 +1,4 @@
+import { data } from "data";
 import { GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -8,11 +9,13 @@ import {
 } from "next-drupal";
 
 import { Layout } from "@/components/layout";
+import { HomePageProps } from "@/types";
 
 // import { NodeArticleTeaser } from "src/components/node-article";
 
 interface IndexPageProps {
   nodes: DrupalNode[];
+  data: HomePageProps;
 }
 
 export default function IndexPage({ nodes }: IndexPageProps) {
@@ -72,7 +75,8 @@ export async function getStaticProps(
 
   return {
     props: {
-      nodes
+      nodes,
+      data // custom data
     },
     revalidate: 10
   };

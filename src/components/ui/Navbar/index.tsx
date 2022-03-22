@@ -8,12 +8,11 @@ import NavItem from "./NavItem";
 
 type Props = {
   menu?: NavMenu;
-  localePath?: string;
 };
 
 const Navbar: React.FC<Props> = (props) => {
-  const { menu, localePath } = props;
-
+  const { menu } = props;
+  console.log("menu", menu);
   return (
     <Box zIndex={999} pos={"relative"}>
       <Container maxW={"container.lg"}>

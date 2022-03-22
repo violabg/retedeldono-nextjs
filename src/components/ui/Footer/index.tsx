@@ -6,9 +6,11 @@ import {
   Icon,
   IconButton,
   Link,
+  ListItem,
   Stack,
   StackDivider,
   Text,
+  UnorderedList,
   VStack
 } from "@chakra-ui/react";
 import React from "react";
@@ -35,6 +37,7 @@ const Footer: React.FC<Props> = (props) => {
       pos={"relative"}
       w={"100vw"}
       py={10}
+      mt={20}
     >
       <Container maxW={"5xl"} color={"white"} w={"full"}>
         <VStack
@@ -79,7 +82,13 @@ const Footer: React.FC<Props> = (props) => {
             justify={"space-between"}
             w={"full"}
           >
-            <NextImage src={"/img/footer-icons.png"} width={400} height={45} />
+            <Box>
+              <UnorderedList>
+                <ListItem listStyleType={"none"}>
+                  <NextImage src={"/img/visa.webp"} width={62} height={37} />
+                </ListItem>
+              </UnorderedList>
+            </Box>
             <Flex
               direction={{ base: "column", md: "row" }}
               align="center"

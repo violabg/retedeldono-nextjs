@@ -30,7 +30,7 @@ const RadioCard: React.FC<Props> = (props) => {
         bg={"#D8D8D8"}
         transition={"all 0.3s ease-in-out"}
         _hover={{
-          bg: "white",
+          bg: "transparent",
           color: "brandOrange",
           textDecoration: "none",
           borderColor: "brandOrange"
